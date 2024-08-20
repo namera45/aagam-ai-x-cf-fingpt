@@ -151,7 +151,7 @@ def main():
 
     with st.sidebar:
         st.title('🤖 AI Assistant Settings')
-        hf_api_token = os.getenv("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")
+        hf_api_token = os.getenv("")
         st.button('Clear Chat History', on_click=clear_chat_history)
 
         uploaded_txt_file = st.file_uploader("Upload fine-tuning data (TXT)", type="txt")
@@ -169,7 +169,7 @@ def main():
 
     client = InferenceClient(
         "mistralai/Mixtral-8x7B-Instruct-v0.1",
-        token="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"
+        token=""
     )
 
     if "messages" not in st.session_state:
